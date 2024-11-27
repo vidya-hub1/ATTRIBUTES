@@ -1,0 +1,157 @@
+:root {
+    --header-bg-color: #333;
+   --sidebar-bg-color: radial-gradient( lightcoral,lightblue);
+   --welcome-bg-color: linear-gradient(to right, orange,tomato);
+   --text-color: black;
+   --caption-bg-color: rgba(0, 0, 0, 0.7);
+   
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+ header{
+    background-color: var(--header-bg-color);
+    padding: 10px; 
+    height: 30px;
+    width:100%;
+    top: 0;
+    line-height: 30px;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+ }
+.logo{
+    float: left;
+    font-size: 1.5em;
+    line-height: 30px;
+}
+header nav{
+    margin-right: 20px;
+}
+header nav ul{
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} 
+header nav li{
+    display: inline;
+    margin: 15px;
+}
+header nav li a{
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+}
+.container{
+    width: 100%;
+    margin: 60px auto 0 auto;
+    max-width: 1500px;
+}
+.welcome{
+    background: var(--welcome-bg-color);
+    padding: 20px;
+    width: 70%;
+    height: 300px;
+    float: left ;
+    box-sizing: border-box;
+    position: relative; 
+}
+.placeholder-image{
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    line-height: 150px;
+    text-align: center;  
+} 
+.placeholder-image::after{
+    content: "150 x 150";
+    color: gray;
+}
+.welcome h1{
+    margin: 0;
+}
+.sidebar{
+    background: var(--sidebar-bg-color);
+    padding: 20px;
+    width: 30%;
+    height: 300px;
+    float: right;
+    box-sizing: border-box;
+}
+.sidebar h2{
+    margin: 5px;
+}
+.sidebar a{
+    display: block;
+    padding: 3px;
+}
+.image-gallery{
+    clear:both;
+    padding: 20px;
+}
+.image{
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    border: 2px solid black;
+    
+}
+.image::after{
+    content: attr(data-caption1);
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    background-color: var(--caption-bg-color);
+    color: white;
+    padding: 5px;
+   margin: 5px;
+}
+.image::before{
+    content: "200 x 200";
+    position: absolute;
+    top:45%;
+    left:33%;
+    color: gray;
+}
+.signup{
+    margin: 20px;
+}
+.signup form{
+    display: block;
+}
+.signup form label{
+    display: block;
+    margin-bottom: 5px;
+}
+.signup form input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid gray
+}
+button{
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
+button:hover{
+    background-color: #555;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width:100%;
+    
+}
